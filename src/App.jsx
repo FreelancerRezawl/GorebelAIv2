@@ -727,14 +727,14 @@ function App() {
             <div className="stats-row bottom-stats">
               <div className="stats-card">
                 <div className="stats-icon-box">
-                  <img src="/assets/cloud_stats_icon.png" alt="12+ Years Cloud Icon" />
+                  <img src="/assets/Untitled_org.png" alt="12+ Years Cloud Icon" />
                 </div>
                 <h4>12+ Years</h4>
                 <p>in AI Enablement</p>
               </div>
               <div className="stats-card">
                 <div className="stats-icon-box">
-                  <img src="/assets/team_stats_icon.png" alt="150+ Years Team Icon" />
+                  <img src="/assets/Untitled_1_org.png" alt="150+ Years Team Icon" />
                 </div>
                 <h4>150+ Years</h4>
                 <p>Collective experience of our team</p>

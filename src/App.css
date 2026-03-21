@@ -167,7 +167,7 @@
 
 /* Who We Are Section */
 .who-we-are-section {
-  padding: 120px 0;
+  padding: 55px 0;
   background-color: var(--bg-soft);
 }
 
@@ -302,7 +302,7 @@
   display: flex;
   align-items: center;
   gap: 60px;
-  padding: 140px 0;
+  padding: 65px 0;
 }
 
 .composable-image {
@@ -350,7 +350,7 @@
 
 /* How We Work */
 .process-hub-section {
-  padding: 140px 0;
+  padding: 65px 0;
 }
 
 
@@ -631,11 +631,16 @@
 /* Gorebel Isolated Stats */
 .gorebel-stats-wrapper {
   background-color: #e8f6fb;
-  padding: 100px 0;
+  padding: 50px 0;
   width: 100%;
   position: relative;
   z-index: 10;
   overflow: hidden;
+}
+
+.bottom-stats .stats-icon-box {
+  width: 140px;
+  height: 140px;
 }
 
 .stats-main-grid {
@@ -1045,7 +1050,7 @@
   }
 
   .who-we-are-section {
-    padding: 80px 0;
+    padding: 40px 0;
   }
 
   .who-inner {
@@ -1073,7 +1078,7 @@
   .composable-ai {
     flex-direction: column;
     text-align: center;
-    padding: 80px 0;
+    padding: 40px 0;
     gap: 40px;
   }
 
@@ -1110,7 +1115,7 @@
   }
 
   .section {
-    padding: 70px 0;
+    padding: 35px 0;
   }
 
   .section-title {
@@ -1329,7 +1334,7 @@
 
 /* Customer Work Logo Slider */
 .customer-work {
-  padding: 120px 0;
+  padding: 55px 0;
   background: var(--white);
   overflow: hidden;
 }
