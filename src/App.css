@@ -120,18 +120,21 @@
   min-height: 100px;
 }
 
-/* Common Titles */
+.section {
+  padding: 55px 0; /* Standard section padding */
+}
+
 .section-title {
   color: var(--dark-navy);
   font-size: 2.2rem;
   font-weight: 800;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
 }
 
 .title-underline {
   height: 8px;
   margin-top: 6px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   background-image: url('/assets/Asset 93.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -140,7 +143,7 @@
 }
 
 .title-underline.center {
-  margin: 6px auto 25px;
+  margin: 6px auto 30px;
   background-position: center;
 }
 
@@ -158,11 +161,11 @@
 }
 
 .subtitle {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: #444;
   max-width: 950px;
-  margin: 0 auto;
+  margin: 0 auto 40px; /* Added bottom margin for "text on top of boxes" spacing */
 }
 
 /* Who We Are Section */
@@ -248,7 +251,7 @@
 
 .partner-card {
   background: var(--white);
-  padding: 30px;
+  padding: 5px; /* Extremely tight padding as requested */
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   text-align: center;
@@ -260,7 +263,7 @@
 }
 
 .logo-wrapper {
-  height: 180px;
+  height: 150px; /* Reduced from 260px for a more compact look */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -269,11 +272,12 @@
 
 .external-partner-logo {
   object-fit: contain;
+  mix-blend-mode: multiply; /* Ensures all partner logos blend correctly */
 }
 
-.ms-logo { height: 140px; width: auto; }
-.aws-logo { height: 170px; width: auto; }
-.cf-logo { height: 120px; width: auto; }
+.ms-logo { height: 110px; width: auto; }
+.aws-logo { height: 110px; width: auto; }
+.cf-logo { height: 75px; width: auto; } /* Reduced height to account for wide wordmark in new asset */
 
 .partner-card h3 {
   margin-bottom: 8px;
@@ -578,11 +582,11 @@
 }
 
 .project-logo img {
-  max-height: 40px;
+  max-height: 56px;
 }
 
 .pb-logo img {
-  height: 25px;
+  height: 56px;
 }
 
 .project-details {
@@ -638,10 +642,7 @@
   overflow: hidden;
 }
 
-.bottom-stats .stats-icon-box {
-  width: 115px;
-  height: 115px;
-}
+
 
 .stats-main-grid {
   max-width: 1000px;
@@ -1334,7 +1335,7 @@
 
 /* Customer Work Logo Slider */
 .customer-work {
-  padding: 55px 0;
+  padding: 45px 0 10px; /* Reduced padding-bottom */
   background: var(--white);
   overflow: hidden;
 }
@@ -1342,7 +1343,7 @@
 .logo-slider {
   display: flex;
   overflow: hidden;
-  padding: 40px 0;
+  padding: 20px 0 35px; /* Reduced vertical padding */
   mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
 
@@ -1362,12 +1363,14 @@
 }
 
 .logo-slide img {
-  height: 75px; /* Increased to 75px for maximum visibility */
+  height: auto;
+  max-height: 55px; /* Standardized height for cleaner look */
   width: auto;
-  max-width: 180px;
+  max-width: 160px;
   object-fit: contain;
   filter: none;
   opacity: 1;
+  mix-blend-mode: multiply; /* Removes white backgrounds from logos */
   transition: all 0.4s ease;
 }
 

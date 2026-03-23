@@ -162,7 +162,7 @@ function App() {
             <div className="partner-card">
               <div className="logo-wrapper">
                 <img
-                  src="/assets/cloudflare_white.png"
+                  src="/assets/Cloudflare_Logo.svg.png"
                   alt="Cloudflare"
                   className="external-partner-logo cf-logo"
                 />
