@@ -502,10 +502,10 @@ function App() {
                 <img src="/assets/Sasol.png" alt="Sasol" />
               </div>
               <div className="logo-slide">
-                <img src="/assets/Asset 40.png" alt="Presspage" />
+                <img src="/assets/presspage_logo_v2.svg" alt="Presspage" />
               </div>
               <div className="logo-slide">
-                <img src="/assets/Asset 34.png" alt="Boomuitgevers" />
+                <img src="/assets/boom_logo_v2.png" alt="Boomuitgevers" />
               </div>
               <div className="logo-slide">
                 <img src="/assets/Asset 52.png" alt="Heineken" />
@@ -514,17 +514,17 @@ function App() {
                 <img src="/assets/Asset 47.png" alt="ASML" />
               </div>
               <div className="logo-slide">
-                <img src="/assets/0179dSC1AqaTy8DbcTJMDYE-7.webp" alt="AWS Logo" />
+                <img src="/assets/aws_logo_v3.png" alt="AWS Logo" />
               </div>
               {/* Duplicate Set for Infinite Slide */}
               <div className="logo-slide">
                 <img src="/assets/Sasol.png" alt="Sasol" />
               </div>
               <div className="logo-slide">
-                <img src="/assets/Asset 40.png" alt="Presspage" />
+                <img src="/assets/presspage_logo_v2.svg" alt="Presspage" />
               </div>
               <div className="logo-slide">
-                <img src="/assets/Asset 34.png" alt="Boomuitgevers" />
+                <img src="/assets/boom_logo_v2.png" alt="Boomuitgevers" />
               </div>
               <div className="logo-slide">
                 <img src="/assets/Asset 52.png" alt="Heineken" />
@@ -533,7 +533,7 @@ function App() {
                 <img src="/assets/Asset 47.png" alt="ASML" />
               </div>
               <div className="logo-slide">
-                <img src="/assets/0179dSC1AqaTy8DbcTJMDYE-7.webp" alt="AWS Logo" />
+                <img src="/assets/aws_logo_v3.png" alt="AWS Logo" />
               </div>
             </div>
           </div>
@@ -621,7 +621,7 @@ function App() {
 
             <div className="project-card">
               <div className="project-logo pb-logo">
-                <img src="/assets/Asset 40.png" alt="Presspage" />
+                <img src="/assets/presspage_logo_v2.svg" alt="Presspage" />
               </div>
               <div className="project-details">
                 <div className="pi-row">
@@ -655,7 +655,7 @@ function App() {
 
             <div className="project-card">
               <div className="project-logo pb-logo">
-                <img src="/assets/Asset 34.png" alt="Boomuitgevers" />
+                <img src="/assets/boom_logo_v2.png" alt="Boomuitgevers" />
               </div>
               <div className="project-details">
                 <div className="pi-row">
