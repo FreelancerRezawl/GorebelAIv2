@@ -55,20 +55,12 @@ function App() {
         <div className="container hero-inner">
           <div className="hero-content">
             <h1>
-              Turn Enterprise Data
-              <br />
-              into Production-Grade
-              <br />
-              <span className="text-teal">AI Systems</span>
+              Turn Enterprise Data into Production-Grade <span className="text-teal">AI Systems</span>
             </h1>
-            <p className="hero-subtitle">
-              Semantic data platforms, vector infrastructure, and
-              <br />
-              AI orchestration built on Azure and modern cloud—designed
-              <br />
-              by black-belt-level engineers.
+            <p className="hero-subtitle text-center mx-auto">
+              Semantic data platforms, vector infrastructure, and AI orchestration built on Azure and modern cloud—designed by black-belt-level engineers.
             </p>
-            <div className="hero-btns">
+            <div className="hero-btns justify-center">
               <a href="#contact" className="btn btn-teal">Schedule Call</a>
               <a href="#projects" className="btn btn-outline">Explore AI Projects</a>
             </div>
@@ -100,11 +92,7 @@ function App() {
             <h2 className="who-title">Who We Are</h2>
             <div className="title-underline" style={{ width: "190px" }}></div>
             <p className="who-bold">
-              We are South Africa’s AI enablement facility,
-              helping businesses transform ideas into real,
-              measurable outcomes. From strategy to
-              deployment, we deliver production-ready AI
-              solutions.
+              We are South Africa’s AI enablement facility, helping businesses transform ideas into real, measurable outcomes. From strategy to deployment, we deliver production-ready AI solutions.
             </p>
             <div className="who-points">
               <p>• Based in George, Western Cape, GoRebel AI is a team of technologists and strategists building the future of business with Artificial Intelligence.</p>
@@ -197,14 +185,8 @@ function App() {
               style={{ width: "240px", margin: "0 0 25px auto" }}
             ></div>
           </div>
-          <h3 className="composer-title text-right">
-            Composable AI assembles reusable building blocks{" "}
-            <br />
-            into governed, measurable systems across clouds.
-            <br />
-            GoRebel applies this model to deliver outcomes
-            <br />
-            faster and more safely.
+          <h3 className="composer-title">
+            Composable AI assembles reusable building blocks into governed, measurable systems across clouds. GoRebel applies this model to deliver outcomes faster and more safely.
           </h3>
           <ul className="composer-list text-right">
             <li>
@@ -347,9 +329,7 @@ function App() {
             </p>
             <p className="specialty-text">
               Our LLM specialty shines on Azure AI Foundry and AWS Bedrock,
-              where we deliver secure, scalable, and
-              <br />
-              business-ready model experiences.
+              where we deliver secure, scalable, and business-ready model experiences.
             </p>
           </div>
 
@@ -511,7 +491,7 @@ function App() {
                 <img src="/assets/Asset 52.png" alt="Heineken" />
               </div>
               <div className="logo-slide">
-                <img src="/assets/Asset 47.png" alt="ASML" />
+                <img src="/assets/asml_logo.png" alt="ASML" />
               </div>
               <div className="logo-slide">
                 <img src="/assets/aws_logo_v3.png" alt="AWS Logo" />
@@ -530,7 +510,7 @@ function App() {
                 <img src="/assets/Asset 52.png" alt="Heineken" />
               </div>
               <div className="logo-slide">
-                <img src="/assets/Asset 47.png" alt="ASML" />
+                <img src="/assets/asml_logo.png" alt="ASML" />
               </div>
               <div className="logo-slide">
                 <img src="/assets/aws_logo_v3.png" alt="AWS Logo" />
@@ -587,7 +567,7 @@ function App() {
 
             <div className="project-card">
               <div className="project-logo pb-logo">
-                <img src="/assets/Asset 47.png" alt="ASML" />
+                <img src="/assets/asml_logo.png" alt="ASML" />
               </div>
               <div className="project-details">
                 <div className="pi-row">
