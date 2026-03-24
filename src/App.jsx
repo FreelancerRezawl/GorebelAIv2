@@ -45,7 +45,8 @@ function App() {
     {
       id: 5,
       title: "Sasol",
-      logo: "/assets/sasol_new_logo.png",
+      logo: "/assets/Sasol.jpg",
+      logoClass: "sasol-project-logo",
       summary: "Building model reinforcement pipelines for drilling data",
       industry: "Global Chemicals",
       outcome: "Python pipelines with Terraform foundation; hourly drift detection, 25% fewer false positives, and phased roll-out to production rigs."
@@ -53,7 +54,7 @@ function App() {
     {
       id: 6,
       title: "Old Mutual",
-      logo: "/assets/old_mutual_official.png",
+      logo: "/assets/OLD-MUTUAL.jpg",
       logoClass: "old-mutual-project-logo",
       summary: "Build MCP server Proof of value with Microsoft",
       industry: "Finance",

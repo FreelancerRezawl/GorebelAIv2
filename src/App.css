@@ -639,9 +639,10 @@
 }
 
 .project-logo {
-  height: 80px; /* Increased from 60px */
+  height: 80px;
   display: flex;
   align-items: center;
+  justify-content: center; /* Center horizontally */
   margin-bottom: 30px;
 }
 
@@ -653,11 +654,10 @@
   height: 70px;
 }
 
-.old-mutual-project-logo {
-  height: 110px !important;
-  max-width: 220px;
-  transform: scale(1.6);
-  margin-left: -5px;
+.old-mutual-project-logo,
+.sasol-project-logo {
+  max-height: 50px;
+  width: auto;
 }
 
 .project-details {
