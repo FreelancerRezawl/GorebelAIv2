@@ -62,12 +62,23 @@ function App() {
   ];
 
   const nextProject = () => {
-    setProjectIndex((prev) => (prev + 1) % (projects.length - 3)); // Show 4 at once (max 2 steps)
+    // Dynamically adjust max steps based on screen width
+    const visibleCards = window.innerWidth <= 767 ? 1 : 4;
+    setProjectIndex((prev) => (prev + 1) % (projects.length - (visibleCards - 1)));
   };
 
   const prevProject = () => {
-    setProjectIndex((prev) => (prev === 0 ? projects.length - 4 : prev - 1));
+    const visibleCards = window.innerWidth <= 767 ? 1 : 4;
+    setProjectIndex((prev) => (prev === 0 ? projects.length - visibleCards : prev - 1));
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Avoid auto-sliding if modal is open purely for better UX
+      nextProject();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [projects.length]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -591,7 +602,9 @@ function App() {
             <div className="projects-grid-wrapper">
               <div
                 className="projects-slider-track"
-                style={{ transform: `translateX(-${projectIndex * (100 / 3.1)}%)` }}
+                style={{ 
+                  transform: `translateX(-${projectIndex * (window.innerWidth <= 767 ? 100 : 25)}%)` 
+                }}
               >
                 {projects.map((project) => (
                   <div className="project-card" key={project.id}>
@@ -629,7 +642,7 @@ function App() {
           </div>
 
           <div className="carousel-dots">
-            {Array.from({ length: projects.length - 3 }).map((_, idx) => (
+            {Array.from({ length: projects.length - (window.innerWidth <= 767 ? 0 : 3) }).map((_, idx) => (
               <span
                 key={idx}
                 className={`dot ${projectIndex === idx ? "active" : ""}`}
