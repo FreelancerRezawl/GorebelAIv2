@@ -7,6 +7,67 @@ function App() {
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const [showCookieModal, setShowCookieModal] = useState(false);
   const [showTermsModal, setShowTermsModal] = useState(false);
+  const [projectIndex, setProjectIndex] = useState(0);
+
+  const projects = [
+    {
+      id: 1,
+      title: "Heineken",
+      logo: "/assets/Heineken.jpg",
+      summary: "Digest incoming support emails and draft AI-assisted responses on Azure AI Foundry.",
+      industry: "Food",
+      outcome: "Azure Foundry delivery with Python services and Terraform foundation; 78% deflection, 25% faster response time, and EU AI Act aligned controls."
+    },
+    {
+      id: 2,
+      title: "ASML",
+      logo: "/assets/Asml.jpg",
+      summary: "Hybrid Azure AI Foundry platform for sensitive IP, with semantic search and SharePoint connectors.",
+      industry: "Electronics and Engineering",
+      outcome: "Hybrid deployment (Azure plus local data center), Python services, and Terraform foundation. 20,000 users, 45% faster discovery, and secure access controls."
+    },
+    {
+      id: 3,
+      title: "Presspage",
+      logo: "/assets/Presspage.jpg",
+      summary: "Built a composable AWS AI landing zone with Python services and Terraform foundation.",
+      industry: "Media & Communications",
+      outcome: "50% faster onboarding, standardized security baselines, and reusable AI delivery patterns."
+    },
+    {
+      id: 4,
+      title: "Boom Uitgevers",
+      logo: "/assets/Boom-uitgeverse.jpg",
+      summary: "Turn a publishing company into an ISV",
+      industry: "Publishing",
+      outcome: "Azure stack with Python services and Terraform foundation; 40% faster publishing workflows, GDPR-aligned governance, and secure external developer access."
+    },
+    {
+      id: 5,
+      title: "Sasol",
+      logo: "/assets/sasol_new_logo.png",
+      summary: "Building model reinforcement pipelines for drilling data",
+      industry: "Global Chemicals",
+      outcome: "Python pipelines with Terraform foundation; hourly drift detection, 25% fewer false positives, and phased roll-out to production rigs."
+    },
+    {
+      id: 6,
+      title: "Old Mutual",
+      logo: "/assets/old_mutual_official.png",
+      logoClass: "old-mutual-project-logo",
+      summary: "Build MCP server Proof of value with Microsoft",
+      industry: "Finance",
+      outcome: "Python services with Terraform foundation; 30% faster screening, audit-ready logs, and controlled access to risk models."
+    }
+  ];
+
+  const nextProject = () => {
+    setProjectIndex((prev) => (prev + 1) % (projects.length - 3)); // Show 4 at once (max 2 steps)
+  };
+
+  const prevProject = () => {
+    setProjectIndex((prev) => (prev === 0 ? projects.length - 4 : prev - 1));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -493,9 +554,6 @@ function App() {
               <div className="logo-slide">
                 <img src="/assets/asml_logo.png" alt="ASML" />
               </div>
-              <div className="logo-slide">
-                <img src="/assets/aws_logo_v3.png" alt="AWS Logo" />
-              </div>
               {/* Duplicate Set for Infinite Slide */}
               <div className="logo-slide">
                 <img src="/assets/sasol_new_logo.png" alt="Sasol" className="sasol-logo" />
@@ -512,9 +570,6 @@ function App() {
               <div className="logo-slide">
                 <img src="/assets/asml_logo.png" alt="ASML" />
               </div>
-              <div className="logo-slide">
-                <img src="/assets/aws_logo_v3.png" alt="AWS Logo" />
-              </div>
             </div>
           </div>
         </div>
@@ -529,146 +584,59 @@ function App() {
             style={{ width: "160px" }}
           ></div>
           <p className="subtitle mb-5">Projects We Brought to Life with AI</p>
-
-          <div className="projects-grid">
-            <div className="project-card">
-              <div className="project-logo">
-                <img src="/assets/Heineken.jpg" alt="Heineken" />
+          <div className="projects-carousel-container">
+            <button className="carousel-nav-btn prev" onClick={prevProject}>
+              <i className="fas fa-chevron-left"></i>
+            </button>
+            <div className="projects-grid-wrapper">
+              <div
+                className="projects-slider-track"
+                style={{ transform: `translateX(-${projectIndex * (100 / 3.1)}%)` }}
+              >
+                {projects.map((project) => (
+                  <div className="project-card" key={project.id}>
+                    <div className="project-logo pb-logo">
+                      <img src={project.logo} alt={project.title} className={project.logoClass || ""} />
+                    </div>
+                    <div className="project-details">
+                      <div className="pi-row">
+                        <span className="pi-label">Project Title :</span>{" "}
+                        <span className="pi-val">{project.title}</span>
+                      </div>
+                      <div className="pi-row">
+                        <span className="pi-label">Summary :</span>{" "}
+                        <span className="pi-val">{project.summary}</span>
+                      </div>
+                      <div className="pi-row">
+                        <span className="pi-label">Industry :</span>{" "}
+                        <span className="pi-val">{project.industry}</span>
+                      </div>
+                      <div className="pi-row">
+                        <span className="pi-label">Outcome :</span>{" "}
+                        <span className="pi-val">{project.outcome}</span>
+                      </div>
+                    </div>
+                    <a href="#contact" className="btn btn-teal btn-full">
+                      Schedule Call To View
+                    </a>
+                  </div>
+                ))}
               </div>
-              <div className="project-details">
-                <div className="pi-row">
-                  <span className="pi-label">Project Title :</span>{" "}
-                  <span className="pi-val">Heineken</span>
-                </div>
-                <div className="pi-row">
-                  <span className="pi-label">Summary :</span>{" "}
-                  <span className="pi-val">
-                    Digest incoming support emails and draft AI assisted
-                    responses on Azure AI Foundry.
-                  </span>
-                </div>
-                <div className="pi-row">
-                  <span className="pi-label">Industry :</span>{" "}
-                  <span className="pi-val">Food</span>
-                </div>
-                <div className="pi-row">
-                  <span className="pi-label">Outcome :</span>{" "}
-                  <span className="pi-val">
-                    Azure Foundry delivery with Python services and Terraform
-                    foundation. 78% deflection, 25% faster response time, and EU
-                    AI Act aligned controls.
-                  </span>
-                </div>
-              </div>
-              <a href="#contact" className="btn btn-teal btn-full">
-                Schedule Call To View
-              </a>
             </div>
-
-            <div className="project-card">
-              <div className="project-logo pb-logo">
-                <img src="/assets/Asml.jpg" alt="ASML" />
-              </div>
-              <div className="project-details">
-                <div className="pi-row">
-                  <span className="pi-label">Project Title :</span>{" "}
-                  <span className="pi-val">ASML</span>
-                </div>
-                <div className="pi-row">
-                  <span className="pi-label">Summary :</span>{" "}
-                  <span className="pi-val">
-                    Hybrid Azure AI Foundry platform for sensitive IP, with
-                    semantic search and SharePoint connectors.
-                  </span>
-                </div>
-                <div className="pi-row">
-                  <span className="pi-label">Industry :</span>{" "}
-                  <span className="pi-val">Electronics and Engineering</span>
-                </div>
-                <div className="pi-row">
-                  <span className="pi-label">Outcome :</span>{" "}
-                  <span className="pi-val">
-                    Hybrid deployment (Azure plus local data center), Python
-                    services, and Terraform foundation. 20,000 users, 45% faster
-                    discovery, and secure access controls.
-                  </span>
-                </div>
-              </div>
-              <a href="#contact" className="btn btn-teal btn-full">
-                Schedule Call To View
-              </a>
-            </div>
-
-            <div className="project-card">
-              <div className="project-logo pb-logo">
-                <img src="/assets/Presspage.jpg" alt="Presspage" />
-              </div>
-              <div className="project-details">
-                <div className="pi-row">
-                  <span className="pi-label">Project Title :</span>{" "}
-                  <span className="pi-val">Heineken</span>
-                </div>
-                <div className="pi-row">
-                  <span className="pi-label">Summary :</span>{" "}
-                  <span className="pi-val">
-                    Digest incoming support emails and draft AI assisted
-                    responses on Azure AI Foundry.
-                  </span>
-                </div>
-                <div className="pi-row">
-                  <span className="pi-label">Industry :</span>{" "}
-                  <span className="pi-val">Food</span>
-                </div>
-                <div className="pi-row">
-                  <span className="pi-label">Outcome :</span>{" "}
-                  <span className="pi-val">
-                    Azure Foundry delivery with Python services and Terraform
-                    foundation. 78% deflection, 25% faster response time, and EU
-                    AI Act aligned controls.
-                  </span>
-                </div>
-              </div>
-              <a href="#contact" className="btn btn-teal btn-full">
-                Schedule Call To View
-              </a>
-            </div>
-
-            <div className="project-card">
-              <div className="project-logo pb-logo">
-                <img src="/assets/Boom-uitgeverse.jpg" alt="Boomuitgevers" />
-              </div>
-              <div className="project-details">
-                <div className="pi-row">
-                  <span className="pi-label">Project Title :</span>{" "}
-                  <span className="pi-val">ASML</span>
-                </div>
-                <div className="pi-row">
-                  <span className="pi-label">Summary :</span>{" "}
-                  <span className="pi-val">
-                    Hybrid Azure AI Foundry platform for sensitive IP, with
-                    semantic search and SharePoint connectors.
-                  </span>
-                </div>
-                <div className="pi-row">
-                  <span className="pi-label">Industry :</span>{" "}
-                  <span className="pi-val">Electronics and Engineering</span>
-                </div>
-                <div className="pi-row">
-                  <span className="pi-label">Outcome :</span>{" "}
-                  <span className="pi-val">
-                    Hybrid deployment (Azure plus local data center), Python
-                    services, and Terraform foundation. 20,000 users, 45% faster
-                    discovery, and secure access controls.
-                  </span>
-                </div>
-              </div>
-              <a href="#contact" className="btn btn-teal btn-full">
-                Schedule Call To View
-              </a>
-            </div>
+            <button className="carousel-nav-btn next" onClick={nextProject}>
+              <i className="fas fa-chevron-right"></i>
+            </button>
           </div>
 
-
+          <div className="carousel-dots">
+            {Array.from({ length: projects.length - 3 }).map((_, idx) => (
+              <span
+                key={idx}
+                className={`dot ${projectIndex === idx ? "active" : ""}`}
+                onClick={() => setProjectIndex(idx)}
+              ></span>
+            ))}
+          </div>
         </div>
       </section>
 
