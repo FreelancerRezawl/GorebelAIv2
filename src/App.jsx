@@ -533,7 +533,7 @@ function App() {
           <div className="projects-grid">
             <div className="project-card">
               <div className="project-logo">
-                <img src="/assets/Asset 52.png" alt="Heineken" />
+                <img src="/assets/Heineken.jpg" alt="Heineken" />
               </div>
               <div className="project-details">
                 <div className="pi-row">
@@ -567,7 +567,7 @@ function App() {
 
             <div className="project-card">
               <div className="project-logo pb-logo">
-                <img src="/assets/asml_logo.png" alt="ASML" />
+                <img src="/assets/Asml.jpg" alt="ASML" />
               </div>
               <div className="project-details">
                 <div className="pi-row">
@@ -601,7 +601,7 @@ function App() {
 
             <div className="project-card">
               <div className="project-logo pb-logo">
-                <img src="/assets/presspage_logo_v2.svg" alt="Presspage" />
+                <img src="/assets/Presspage.jpg" alt="Presspage" />
               </div>
               <div className="project-details">
                 <div className="pi-row">
@@ -635,7 +635,7 @@ function App() {
 
             <div className="project-card">
               <div className="project-logo pb-logo">
-                <img src="/assets/boom_logo_v2.png" alt="Boomuitgevers" />
+                <img src="/assets/Boom-uitgeverse.jpg" alt="Boomuitgevers" />
               </div>
               <div className="project-details">
                 <div className="pi-row">
@@ -668,11 +668,7 @@ function App() {
             </div>
           </div>
 
-          <div className="carousel-dots">
-            <span className="dot active"></span>
-            <span className="dot"></span>
-            <span className="dot"></span>
-          </div>
+
         </div>
       </section>
 
