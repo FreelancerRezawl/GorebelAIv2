@@ -1506,6 +1506,10 @@
   transition: all 0.4s ease;
 }
 
+.sasol-logo {
+  max-height: 80px !important;
+}
+
 .logo-slide img:hover {
   transform: scale(1.1);
   filter: grayscale(0%);

@@ -479,7 +479,7 @@ function App() {
             <div className="logo-track">
               {/* First Set */}
               <div className="logo-slide">
-                <img src="/assets/Sasol.png" alt="Sasol" />
+                <img src="/assets/sasol_new_logo.png" alt="Sasol" className="sasol-logo" />
               </div>
               <div className="logo-slide">
                 <img src="/assets/presspage_logo_v2.svg" alt="Presspage" />
@@ -498,7 +498,7 @@ function App() {
               </div>
               {/* Duplicate Set for Infinite Slide */}
               <div className="logo-slide">
-                <img src="/assets/Sasol.png" alt="Sasol" />
+                <img src="/assets/sasol_new_logo.png" alt="Sasol" className="sasol-logo" />
               </div>
               <div className="logo-slide">
                 <img src="/assets/presspage_logo_v2.svg" alt="Presspage" />
