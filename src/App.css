@@ -122,6 +122,7 @@
 
 .section {
   padding: 55px 0; /* Standard section padding */
+  scroll-margin-top: 100px;
 }
 
 .section-title {
@@ -711,6 +712,7 @@
   position: relative;
   z-index: 10;
   overflow: hidden;
+  margin-bottom: 20px; /* Added spacing before Contact Us */
 }
 
 
@@ -780,9 +782,13 @@
 }
 
 /* Contact */
+.contact-section {
+  padding: 80px 0;
+}
+
 .contact-form {
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 800px;
+  margin: 40px auto 0;
 }
 
 .form-row {
@@ -791,22 +797,27 @@
   margin-bottom: 20px;
 }
 
-.form-input {
+.form-group {
   flex: 1;
-  padding: 16px 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px 25px;
   border: 1px solid #d1d9e2;
-  border-radius: 8px;
+  border-radius: 10px;
   font-family: inherit;
   font-size: 1rem;
   background-color: #f8f9fa;
   transition: all 0.3s;
   color: #333;
+  font-weight: 600;
 }
 
 .form-input::placeholder {
-  color: #666;
+  color: #6a6e7d;
   font-weight: 700;
-  opacity: 1; /* For Firefox */
+  opacity: 1;
 }
 
 .form-input:focus {
@@ -825,12 +836,112 @@
   resize: vertical;
 }
 
+.submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .submit-btn {
-  padding: 12px 40px;
-  text-transform: none;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: 12px 45px;
+  background: linear-gradient(to right, #38d39f, #32abb8);
+  color: white;
+  border: none;
   border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(56, 211, 159, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 211, 159, 0.4);
+  background: linear-gradient(to right, #2eb98b, #2a929e);
+  opacity: 1;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+/* HubSpot Form Overrides */
+.hs-form-frame .hs-form {
+  text-align: left;
+}
+
+/* Form Title / Subtitle inside HubSpot */
+.hs-form-frame p, 
+.hs-form-frame .hs-field-desc,
+.hs-form-frame .hs-main-font-element {
+  font-weight: 700 !important;
+  color: #111 !important;
+  font-size: 1.1rem !important;
+  margin-bottom: 30px !important;
+  text-align: center !important;
+}
+
+/* Labels */
+.hs-form-frame label {
+  font-weight: 700 !important;
+  color: var(--dark-navy) !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+
+/* Inputs */
+.hs-form-frame .hs-input {
+  width: 100% !important;
+  padding: 12px 20px !important;
+  border: 1px solid #d1d9e2 !important;
+  border-radius: 10px !important;
+  background-color: #f8f9fa !important;
+  font-family: inherit !important;
+}
+
+.hs-form-frame .hs-input:focus {
+  border-color: var(--teal) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(44, 179, 152, 0.1) !important;
+}
+
+/* Button & Actions */
+.hs-form-frame .actions,
+.hs-form-frame .hs-submit,
+.hs-form-frame .hs_submit,
+.hs-form-frame .hs_submit .actions {
+  display: flex !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin-top: 30px !important;
+}
+
+.hs-form-frame .hs-button,
+.hs-form-frame input[type="submit"] {
+  display: block !important;
+  margin: 0 auto !important;
+  padding: 12px 45px !important;
+  background: linear-gradient(to right, #38d39f, #32abb8) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(56, 211, 159, 0.3) !important;
+  text-transform: none !important;
+  float: none !important;
+}
+
+.hs-form-frame .hs-button:hover,
+.hs-form-frame input[type="submit"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(56, 211, 159, 0.4) !important;
+  background: linear-gradient(to right, #2eb98b, #2a929e) !important;
 }
 
 /* Footer */

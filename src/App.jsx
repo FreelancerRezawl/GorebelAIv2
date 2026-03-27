@@ -89,6 +89,26 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Check if HubSpot script is loaded
+    const checkHbspt = setInterval(() => {
+      if (window.hbspt && window.hbspt.forms) {
+        clearInterval(checkHbspt);
+        window.hbspt.forms.create({
+          region: "eu1",
+          portalId: "147921058",
+          formId: "378aabfc-302c-400a-be01-5ef42dc54891",
+          target: "#hubspot-form-container",
+          css: ".hs_submit { display: flex !important; justify-content: center !important; } .hs-button { margin: 0 auto !important; }",
+          onFormReady: (form) => {
+             console.log("HubSpot form ready");
+          }
+        });
+      }
+    }, 500);
+    return () => clearInterval(checkHbspt);
+  }, []);
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
@@ -709,48 +729,12 @@ function App() {
           className="title-underline center"
           style={{ width: "190px" }}
         ></div>
-        <p className="subtitle mb-4 fw-700">
-          We'd like to hear from you! Please fill out the form and we'll get
-          back to you as soon as possible.
-        </p>
 
-        <form className="contact-form">
-          <div className="form-row">
-            <input
-              type="text"
-              placeholder="First name"
-              className="form-input"
-            />
-            <input
-              type="text"
-              placeholder="First name"
-              className="form-input"
-            />
-          </div>
-          <div className="form-row">
-            <input
-              type="email"
-              placeholder="Email*"
-              className="form-input full"
-            />
-          </div>
-          <div className="form-row">
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              className="form-input full"
-            />
-          </div>
-          <div className="form-row">
-            <textarea
-              placeholder="Your Message"
-              className="form-input full textarea"
-            ></textarea>
-          </div>
-          <button type="submit" className="btn btn-teal submit-btn">
-            Submit
-          </button>
-        </form>
+        <div 
+          id="hubspot-form-container"
+          className="hs-form-frame" 
+          style={{ margin: "40px auto", maxWidth: "800px" }}
+        ></div>
       </section>
 
       {/* Footer */}
@@ -783,8 +767,13 @@ function App() {
               <div className="social-links mt-3">
                 <a href="#"><i className="fab fa-facebook-f"></i></a>
                 <a href="#"><i className="fab fa-twitter"></i></a>
-                <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/company/gorebel-artificial-intelligence/" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
                 <a href="#"><i className="fab fa-instagram"></i></a>
+                <a href="https://wa.me/27675747456" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-whatsapp"></i>
+                </a>
               </div>
             </div>
 
@@ -807,8 +796,8 @@ function App() {
                 <a href="mailto:help@gorebelai.com" style={{ color: "white", textDecoration: "none" }}>help@gorebelai.com</a>
               </p>
               <p className="footer-text mt-2">
-                <a href="tel:+2800857419095" style={{ color: "white", textDecoration: "none", fontWeight: '700' }}>
-                  (+280)085 741 9095
+                <a href="tel:+27725823326" style={{ color: "white", textDecoration: "none", fontWeight: '700' }}>
+                  +27 72 582 3326
                 </a>
               </p>
             </div>
